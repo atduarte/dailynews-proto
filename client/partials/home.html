@@ -1,0 +1,46 @@
+<div class="news-collection">
+    <div class="row">
+
+        <div ng-repeat="source in sources"  class="col s12 m6 l4 animation">
+            <div class="card teal darken-1">
+                <div class="card-image">
+                    <div class="logo" ng-click="removeSource(source);">
+                        <img ng-src="{{ source.imageUrl }}" alt="" width="20" height="20" ng-show="source.imageUrl" />
+                        <span ng-hide="source.imageUrl">
+                            <i class="mdi-action-highlight-remove"></i>
+                        </span>
+                    </div>
+
+                    <img ng-src="http://lorempixel.com/397/150/?{{ source._id.$id }}">
+                </div>
+                <a  target="_blank" href="{{source.link}}">
+                    <div class="card-content white-text">
+                        <span class="card-title">
+
+                            {{ source.title }}
+                        </span>
+                        <p>{{source.description}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col right-align s12">
+            <a ng-click="openSourceModal();" id="add-source" data-target="modal1" class="right-align btn-floating btn-large waves-effect waves-light red modal-trigger"><i class="mdi-content-add"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="new-source-modal" class="modal">
+    <div class="modal-content">
+        <h4>Adicionar Nova Fonte</h4>
+        <div class="input-field col s6">
+            <input id="input_text" type="text" ng-model="newSource">
+            <label for="input_text">URL</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a ng-click="createSource();" class="waves-effect waves-light btn">Adicionar</a>
+    </div>
+</div>

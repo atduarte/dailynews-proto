@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="newsApp">
+<head>
+    <title>Daily News</title>
+    <link rel="stylesheet" type="text/css"         href="public/css/main.css">
+    <link rel="stylesheet" type="text/css"         href="public/vendor/materialize/bin/materialize.css">
+
+    <script                type="text/javascript"  src="public/vendor/jquery/dist/jquery.min.js"></script>
+    <script                type="text/javascript"  src="public/vendor/materialize/bin/materialize.js"></script>
+    <script                type="text/javascript"  src="public/js/index.js"></script>
+
+    <script                type="text/javascript"  src ="public/vendor/angular/angular.min.js"></script>
+    <script                type="text/javascript"  src ="public/vendor/angular-route/angular-route.min.js"></script>
+    <!-- Configs-->
+    <script                type="text/javascript"  src="public/js/configs/Config.js"></script>
+    <!-- Custom Directives -->
+    <script                type="text/javascript"  src="public/js/directives/Directive.js"></script>
+    <script                type="text/javascript"  src="public/js/directives/EndRepeat.js"></script>
+
+    <!-- Custom Services -->
+    <script                type="text/javascript"  src="public/js/services/service.js"></script>
+    <script                type="text/javascript"  src="public/js/services/flash.js"></script>
+
+    <!-- Controllers -->
+
+    <script                type="text/javascript"  src="public/js/controllers/Ctrl.js"></script>
+    <script                type="text/javascript"  src="public/js/controllers/HomeCtrl.js"></script>
+    <script                type="text/javascript"  src="public/js/controllers/LoginCtrl.js"></script>
+    <script                type="text/javascript"  src="public/js/controllers/NewsCtrl.js"></script>
+    <script                type="text/javascript"  src="public/js/controllers/HeaderCtrl.js"></script>
+    <script                type="text/javascript"  src="public/js/controllers/ErrorCtrl.js"></script>
+    <script                type="text/javascript"  src="public/js/app.js"></script>
+
+
+
+
+
+</head>
+<body >
+<div ng-include="'partials/navbar.html'"></div>
+
+<div class="container">
+    <div ng-view class="view-frame"></div>
+</div>
+
+
+
+</body>
+</html>

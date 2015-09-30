@@ -1,0 +1,16 @@
+{
+        "name": "notnull/dailynews-proto",
+        "description": "DailyNews - Prototype",
+        "keywords": ["notnull", "dailynews-proto"],
+        "require": {
+            "php": ">=5.4",
+            "ext-phalcon": "1.3.*",
+            "phalcon/incubator": "dev-master",
+            "guzzlehttp/guzzle": "~4.0",
+            "simplepie/simplepie": "dev-master"
+        },
+        "config": {
+                "preferred-install": "dist"
+        },
+        "minimum-stability": "stable"
+}

@@ -1,0 +1,122 @@
+.container{
+  height: 100%;
+}
+.center-page-align{
+  margin-top: 5%;
+}
+body{
+  min-height: 100vh;
+}
+
+.news-collection{
+  margin-top: 30px;
+
+  .card-image{
+    height: 150px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+
+    .logo {
+      z-index:2;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      background-color: rgba(255,255,255,0.2);
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+    }
+
+    .logo:hover span {
+      color: red;
+    }
+
+    .logo span {
+      position: absolute;
+      font-size: 26px;
+      top: 2px;
+      left: 7px;
+      color: rgb(255, 255, 255);
+
+      transition: all .5s ease;
+    }
+
+    img {
+      width: auto !important;
+      border-radius: 0;
+    }
+  }
+  #add-source{
+    position:relative;
+    right: 0;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  a:hover .card-content span {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .card:hover .logo span {
+    display: block !important;
+    transition: all .2s ease;
+  }
+
+  .card:hover .logo img {
+    display: none !important;
+  }
+}
+.new.card-panel{
+  box-shadow: none;
+}
+.animation{
+
+}
+.animation.scaleHover{
+
+}
+.animation.scaleHover:hover{
+  transform: scale(1.1);
+}
+.news-collection{
+  .card-panel{
+    margin: 0;
+    box-shadow: none;
+  }
+  .card-panel:hover{
+  }
+  .collapsible-header span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+}
+
+
+.news{
+  .collection{
+    width: 175px;
+  }
+  .collection-item{
+    cursor:pointer;
+  }
+}
+.animation {
+  -webkit-transition: 1s;
+}
+.animation.ng-enter {
+  opacity: 0;
+}
+.animation.ng-leave {
+  opacity: 1;
+}
+.animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}

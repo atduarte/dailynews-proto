@@ -1,0 +1,15 @@
+<div ng-controller="HeaderCtrl" class="navbar-fixed">
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="#/user/{{ user.username }}" class="brand-logo"  style="font-size: 20.5px">
+                <img height="62px" src="https://cdn2.iconfinder.com/data/icons/plex-for-android/96/news.png" style="padding: 10px 15px 5px">
+                <span style="position: relative; bottom: 23px">Daily News</span>
+            </a>
+            <ul ng-if="user.username" class="right hide-on-med-and-down">
+                <li><a href="#/user/{{ user.username }}/news">News</a></li>
+                <li><a href="#/user/{{ user.username }}/">Sources</a></li>
+                <li><a href="#/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>

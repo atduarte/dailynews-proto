@@ -1,0 +1,7 @@
+.DS_Store
+/public/.DS_Store
+/public/cache
+/vendor/
+app/views/cache
+cache/
+.idea/

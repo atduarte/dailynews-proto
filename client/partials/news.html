@@ -1,0 +1,32 @@
+
+<div class="news">
+    <ul class="collection"  style="position: fixed;left:20px">
+        <li
+                ng-repeat="newsEntry in newsEntrys"
+                class="collection-item "
+                ng-class="{ 'active': $index == selectedIndex }"
+
+                ng-click="setCurrent(newsEntry,$index)"
+                >
+            {{ newsEntry.date * 1000| date : 'yyyy-MM-dd '}}
+        </li>
+    </ul>
+    <h3>Daily News</h3>
+    <ul class="collapsible popout" data-collapsible="accordion">
+        <li ng-repeat="(key,new) in currentNews.dailyNews" end-repeat="collapsible();">
+            <div class="collapsible-header"><i class="mdi-navigation-arrow-drop-down"></i><a ng-href="{{new.entryId}}" target='_blank' ng-bind-html="new.title"></a></div>
+            <div class="collapsible-body">
+                <div class="card-panel new">
+                    <div class="row valign-wrapper">
+                        <div class="col s10">
+                        <span class="black-text" ng-bind-html="new.description">
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
